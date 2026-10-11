@@ -1,6 +1,4 @@
 # Gestion des Produits et Catégories 
-
-
 ##  Captures d'écran de l'application
 
 ### 1. Catalogue des Produits 
@@ -31,7 +29,5 @@
 * **Suppression d'une catégorie :**
   ![Suppression catégorie](Screenshots/Capture%20d'%C3%A9cran%202026-10-11%20151511.png)
 
-
-
 * **Frontend :** HTML5, CSS3, Bootstrap 5, Bootstrap Icons
-* **Version Control :** Git & GitHub
+* **Version Control :** Git & GitH
