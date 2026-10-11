@@ -1,0 +1,64 @@
+@page
+@model GestionProduits.Pages.Produits.CreateModel
+@{ ViewData["Title"] = "Nouveau Produit"; }
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body p-4 p-md-5">
+                    <div class="text-center mb-4">
+                        <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex p-3 mb-3 fs-3">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+                        <h2 class="fw-bold text-dark">Ajouter un Produit</h2>
+                        <p class="text-muted small">Renseignez les informations du nouveau produit</p>
+                    </div>
+
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger rounded-3 small" role="alert"></div>
+                        
+                        <div class="mb-3">
+                            <label asp-for="Produit.Nom" class="form-label fw-semibold">Nom du produit</label>
+                            <input asp-for="Produit.Nom" class="form-control bg-light border-0 py-2" placeholder="Ex: PC Portable Gamer" />
+                            <span asp-validation-for="Produit.Nom" class="text-danger small"></span>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label asp-for="Produit.Prix" class="form-label fw-semibold">Prix (€)</label>
+                            <input asp-for="Produit.Prix" class="form-control bg-light border-0 py-2" placeholder="0.00" />
+                            <span asp-validation-for="Produit.Prix" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Produit.Stock" class="form-label fw-semibold">Stock initial</label>
+                            <input asp-for="Produit.Stock" class="form-control bg-light border-0 py-2" placeholder="0" />
+                            <span asp-validation-for="Produit.Stock" class="text-danger small"></span>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label asp-for="Produit.CategorieId" class="form-label fw-semibold">Catégorie</label>
+                            <select asp-for="Produit.CategorieId" class="form-select bg-light border-0 py-2" asp-items="ViewBag.CategorieId">
+                                <option value="">-- Sélectionnez une catégorie --</option>
+                            </select>
+                            <span asp-validation-for="Produit.CategorieId" class="text-danger small"></span>
+                        </div>
+                        
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary py-2 rounded-pill fw-semibold shadow-sm">
+                                <i class="bi bi-check-lg me-1"></i> Enregistrer le produit
+                            </button>
+                            <a asp-page="Index" class="btn btn-light text-secondary py-2 rounded-pill fw-semibold">
+                                Annuler
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,44 @@
+@page
+@model GestionProduits.Pages.Categories.CreateModel
+@{ ViewData["Title"] = "Nouvelle Catégorie"; }
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body p-4 p-md-5">
+                    <div class="text-center mb-4">
+                        <div class="bg-warning bg-opacity-10 text-warning rounded-circle d-inline-flex p-3 mb-3 fs-3">
+                            <i class="bi bi-tag"></i>
+                        </div>
+                        <h2 class="fw-bold text-dark">Nouvelle Catégorie</h2>
+                        <p class="text-muted small">Créez une nouvelle famille de produits</p>
+                    </div>
+
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger rounded-3 small" role="alert"></div>
+                        
+                        <div class="mb-4">
+                            <label asp-for="Categorie.Nom" class="form-label fw-semibold">Nom de la catégorie</label>
+                            <input asp-for="Categorie.Nom" class="form-control bg-light border-0 py-2" placeholder="Ex: Informatique" />
+                            <span asp-validation-for="Categorie.Nom" class="text-danger small"></span>
+                        </div>
+                        
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary py-2 rounded-pill fw-semibold shadow-sm">
+                                <i class="bi bi-check-lg me-1"></i> Enregistrer
+                            </button>
+                            <a asp-page="Index" class="btn btn-light text-secondary py-2 rounded-pill fw-semibold">
+                                Annuler
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
