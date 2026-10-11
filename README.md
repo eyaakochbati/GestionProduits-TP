@@ -32,6 +32,6 @@
   ![Suppression catégorie](Screenshots/Capture%20d'%C3%A9cran%202026-10-11%20151511.png)
 
 
-* **Base de données :** SQL Server LocalDB
+
 * **Frontend :** HTML5, CSS3, Bootstrap 5, Bootstrap Icons
 * **Version Control :** Git & GitHub
